@@ -19,15 +19,14 @@
         <!-- Email Address -->
         <div class="mb-3">
             <label for="email" class="form-label">
-                Email
+                Email or Username
             </label>
 
             <input
                 id="email"
-                type="email"
+                type="text"
                 name="email"
                 class="form-control @error('email') is-invalid @enderror"
-                value="{{ old('email') }}"
                 required
                 autofocus
                 autocomplete="username"

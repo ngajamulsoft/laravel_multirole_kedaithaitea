@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\PermissionController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +31,14 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::name('admin.')
+    ->prefix('admin')
+    ->middleware('auth','role:superadmin')
+    ->group(function () {
+        Route::resource('user', UserController::class);
+        Route::resource('permission', PermissionController::class);
+        Route::resource('role', RoleController::class);
+    });
+

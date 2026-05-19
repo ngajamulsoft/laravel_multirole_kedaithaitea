@@ -64,19 +64,6 @@
     </footer>
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
-    <!-- Table Treeview JavaScript -->
-    <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
-    <!-- Chart Custom JavaScript -->
-    <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
-    <!-- Chart Custom JavaScript -->
-    <script async src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
-    <!-- app JavaScript -->
-    <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @livewireScripts
   </body>
