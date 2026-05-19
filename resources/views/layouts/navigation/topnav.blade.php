@@ -14,6 +14,10 @@
                     
 
                         @role('superadmin')
+                        <a href="{{ route('admin.role.index') }}" class="btn btn-outline-primary mr-2">
+                            <i class="la la-shield mr-0"></i>
+                            Role
+                        </a>
                         <a href="{{ route('admin.user.index') }}" class="btn btn-outline-primary mr-2">
                             <i class="las la-user mr-0"></i>
                             User

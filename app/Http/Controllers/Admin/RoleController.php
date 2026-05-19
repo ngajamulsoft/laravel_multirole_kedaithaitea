@@ -7,9 +7,11 @@ use App\Models\Permission;
 use App\Models\Role;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
+use App\Traits\FlashAlert;
 
 class RoleController extends Controller
 {
+    use FlashAlert;
     /**
      * Display a listing of the resource.
      *
@@ -122,7 +124,7 @@ class RoleController extends Controller
         try {
             $role = Role::findOrFail($id);
             $role->detachPermissions($role->permissions()->get()->pluck('id')->toArray());
-            $role->forceDelete();
+            $role->Delete();
             return redirect()->route('admin.role.index')->with($this->alertDeleted());
         } catch (ModelNotFoundException $e) {
             return redirect()->route('admin.role.index')->with($this->alertNotFound());
