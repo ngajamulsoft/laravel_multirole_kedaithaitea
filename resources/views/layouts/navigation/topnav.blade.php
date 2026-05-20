@@ -18,6 +18,10 @@
                             <i class="la la-shield mr-0"></i>
                             Role
                         </a>
+                        <a href="{{ route('admin.permission.index') }}" class="btn btn-outline-primary mr-2">
+                            <i class="la la-key mr-0"></i>
+                            Permission
+                        </a>
                         <a href="{{ route('admin.user.index') }}" class="btn btn-outline-primary mr-2">
                             <i class="las la-user mr-0"></i>
                             User

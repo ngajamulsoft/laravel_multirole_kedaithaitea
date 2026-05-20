@@ -49,6 +49,7 @@ class LoginRequest extends FormRequest
         $credentials = [
             $loginField  => $this->input('email'),
             'password'   => $this->input('password'),
+            'is_active' => true, // Pastikan hanya pengguna aktif yang bisa login
         ];
 
         if (! Auth::attempt($credentials, $this->boolean('remember'))) {
